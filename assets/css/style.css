@@ -1,13 +1,12 @@
 /* Orange color: #e67e22 */
-
 /* -------------------------------------------------------------
                             Basic Setup
 ------------------------------------------------------------- */
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html {
@@ -34,7 +33,6 @@ html {
 /* -------------------------------------------------------------
                         Reusable Components
 ------------------------------------------------------------- */
-
 .row {
     max-width: 1140px;
     margin: 0 auto;
@@ -49,7 +47,6 @@ section {
 }
 
 /*----- Headings ----- */
-
 h1,
 h2,
 h3 {
@@ -90,7 +87,6 @@ h2:after {
 }
 
 /*----- Paragraphs ----- */
-
 .long-copy {
     line-height: 145%;
     width: 70%;
@@ -103,7 +99,6 @@ h2:after {
 }
 
 /*----- Icons ----- */
-
 .icon-big {
     font-size: 350%;
     display: block;
@@ -125,13 +120,13 @@ h2:after {
 }
 
 /*----- Links ----- */
-
 a:link,
 a:visited {
     color: #e67e22;
     text-decoration: none;
     padding: 1px;
     border-bottom: 1px solid #e67e22;
+    -webkit-transition: all .2s;
     transition: all .2s;
 }
 
@@ -141,9 +136,7 @@ a:active {
     border-bottom: 1px solid transparent;
 }
 
-
 /*----- Buttons ----- */
-
 .btn:link,
 .btn:visited,
 input[type=submit] {
@@ -152,6 +145,7 @@ input[type=submit] {
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
+    -webkit-transition: all .2s;
     transition: all .2s;
 }
 
@@ -188,18 +182,16 @@ input[type=submit]:active {
     color: #fff;
 }
 
-
 /* -------------------------------------------------------------
                             HEADER
 ------------------------------------------------------------- */
-
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .7)), to(rgba(0, 0, 0, .7))), url(../css/img/hero.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../css/img/hero.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
-    position: relative;
 }
 
 .hero-text-box {
@@ -207,7 +199,8 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -236,6 +229,7 @@ header {
     text-transform: uppercase;
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
 
@@ -247,7 +241,6 @@ header {
 /* -------------------------------------------------------------
                             FEATURES
 ------------------------------------------------------------- */
-
 .section-features .long-copy {
     margin-bottom: 30px;
 }
@@ -255,7 +248,6 @@ header {
 /* -------------------------------------------------------------
                             MEALS
 ------------------------------------------------------------- */
-
 .section-meals {
     padding: 0;
 }
@@ -282,13 +274,16 @@ header {
     opacity: 0.7;
     width: 100%;
     height: auto;
-    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .meal-photo img:hover {
     opacity: 1;
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
 }
 
 /* -------------------------------------------------------------
@@ -349,7 +344,6 @@ header {
 /* -------------------------------------------------------------
                             CITIES
 ------------------------------------------------------------- */
-
 .box img {
     width: 100%;
     height: auto;
@@ -363,12 +357,12 @@ header {
 /* -------------------------------------------------------------
                             TESTIMONIALS
 ------------------------------------------------------------- */
-
 .section-testimonials {
-     background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../css/img/back-customers.jpg);
-     background-size: cover;
-     color: #fff;
-     background-attachment: fixed;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .8)), to(rgba(0, 0, 0, .8))), url(../css/img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../css/img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
 }
 
 blockquote {
@@ -404,7 +398,6 @@ cite img {
 /* -------------------------------------------------------------
                             PLANS
 ------------------------------------------------------------- */
-
 .section-plans {
     background-color: #f4f4f4;
 }
@@ -414,7 +407,8 @@ cite img {
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
-    box-shadow: 0 2px 3px #efefef;
+    -webkit-box-shadow: 0 2px 3px #efefef;
+            box-shadow: 0 2px 3px #efefef;
 }
 
 .plan-box div {
@@ -460,7 +454,6 @@ cite img {
 /* -------------------------------------------------------------
                             FORM
 ------------------------------------------------------------- */
-
 .contact-form {
     width: 60%;
     margin: 0 auto;
@@ -495,7 +488,6 @@ input[type=checkbox] {
 /* -------------------------------------------------------------
                             FOOTER
 ------------------------------------------------------------- */
-
 footer {
     background-color: #333;
     padding: 60px;
@@ -530,6 +522,7 @@ footer {
     text-decoration: none;
     border: 0;
     color: #888;
+    -webkit-transition: color .2s;
     transition: color .2s;
 }
 
@@ -547,6 +540,7 @@ footer {
 .ion-logo-twitter,
 .ion-logo-googleplus,
 .ion-logo-instagram {
+    -webkit-transition: all .2s;
     transition: all .2s;
 }
 
