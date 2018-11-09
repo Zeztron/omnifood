@@ -316,7 +316,7 @@
                             <ul>
                                 <li><i class="icon ion-md-checkmark icon-small"></i>1 meal</li>
                                 <li><i class="icon ion-md-checkmark icon-small"></i>Order from 8 am to 12 pm</li>
-                                <li><i class="icon ion-ios-close icon-small"></i></li>
+                                <li><i class="icon ion-ios-close icon-small"></i>Access to newest creations</li>
                                 <li><i class="icon ion-md-checkmark icon-small"></i>Free delivery</li>
                             </ul>
                         </div>
@@ -328,68 +328,81 @@
             </div>
         </section>
 
-        <section class="section-form">
-            <div class="row">
-                <h2>We're happy to hear from you</h2>
+        <div class="map-box">
+            <div class="map"></div>
+            <div class="form-box" id="form">
+                <div class="row">
+                    <h2>We're happy to hear from you</h2>
+                </div>
+                <div class="row">
+                    <form class="contact-form" action="mailer.php" method="post">
+                        <div class="row">
+                            <?php
+                                if($_GET['success'] == 1) {
+                                    echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
+                                }
+                                if($_GET['success'] == -1) {
+                                    echo "<div class=\"form-messages error\">Oops! Something went wrong. Please try again!</div>";
+                                }
+                            ?>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="name" id="name" placeholder="Your name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="email" name="email" id="email" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="find-us">How did you find us?</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <select name="find-us" id="find-us">
+                                    <option value="friends" selected>Friends</option>
+                                    <option value="search">Online</option>
+                                    <option value="ad">Advertisement</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="news">Newsletter?</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="checkbox" name="news" id="news" checked> Yes, please!
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="message">Drop us a line!</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <textarea name="message" id="message" placeholder="Your message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>&nbsp;</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="submit" value="Send it!" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="row">
-                <form class="contact-form" action="#" method="post">
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="name">Name</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Your name" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="Your email" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="find-us">How did you find us?</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <select name="find-us" id="find-us">
-                                <option value="friends" selected>Friends</option>
-                                <option value="search">Online</option>
-                                <option value="ad">Advertisement</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="news">Newsletter?</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="checkbox" name="news" id="news" checked> Yes, please!
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label for="message">Drop us a line!</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <textarea name="message" id="message" placeholder="Your message"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label>&nbsp;</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="submit" value="Send it!" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
+        </div>
 
         <footer>
             <div class="row">
@@ -425,6 +438,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyD4roYnlIOlsMSa6pjhZHqppxxZSrWRBk0"></script>
+        <script src="vendors/js/gmaps.js"></script>
         <script src="assets/js/script.min.js"></script>
     </body>
 </html>

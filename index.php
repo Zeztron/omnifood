@@ -6,8 +6,8 @@
         <meta name="description" content="Omnifood is a premoium food delivery service with the mission to bring affordable and healthy meals to as many people as possible" />
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/queries.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/queries.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
@@ -440,6 +440,6 @@
         <script src="vendors/js/jquery.waypoints.min.js"></script>
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyD4roYnlIOlsMSa6pjhZHqppxxZSrWRBk0"></script>
         <script src="vendors/js/gmaps.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.min.js"></script>
     </body>
 </html>
