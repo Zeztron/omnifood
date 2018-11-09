@@ -94,21 +94,4 @@ $(document).ready(function() {
               icon.removeClass("ion-md-close");
           }
       });
-
-      // maps //
-      var map = new GMaps({
-          div: '.map',
-          lat: 41.8339037,
-          lng: -87.7,
-          zoom: 12
-      });
-
-      map.addMarker({
-          lat: 41.8339037,
-          lng: -87.7,
-          title: 'Chicago',
-          infoWindow: {
-            content: '<p>Our Chicago HQ</p>'
-            }
-        });
 });
